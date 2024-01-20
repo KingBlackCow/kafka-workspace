@@ -28,7 +28,7 @@ public class KafkaTopicConfiguration {
                 TopicBuilder.name("kafka-workspace-topic-js2")
                         .partitions(3)
                         .replicas(1)
-                        .config(TopicConfig.RETENTION_MS_CONFIG, String.valueOf(1000 * 60 * 60))
+                        .config(TopicConfig.RETENTION_MS_CONFIG, String.valueOf(1000 * 60 * 60)) // 60분
                         .build()
         );
     }
