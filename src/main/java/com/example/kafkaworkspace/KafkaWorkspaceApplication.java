@@ -19,12 +19,14 @@ public class KafkaWorkspaceApplication {
     @Bean
     public ApplicationRunner runner(Producer producer) {
         return args -> {
-            //kafkaTemplate.send("producer_topic", "hello, hi");
+//            kafkaTemplate.send("producer_topic", "hello, hi");
 //            producer.async("producer_topic", "hello, async");
 //            producer.sync("producer_topic", "hello, sync");
-            producer.routingSend("producer_topic", "Hello, routing");
-            producer.routingSendBytes("producer_route_topic", "Hello, Bytes".getBytes(StandardCharsets.UTF_8));
-            producer.replyingSend("request", "Ping");
+//            producer.routingSend("producer_topic", "Hello, routing");
+//            producer.routingSendBytes("producer_route_topic", "Hello, Bytes".getBytes(StandardCharsets.UTF_8));
+//            producer.replyingSend("request", "Ping");
+
+
             Thread.sleep(1000L);
         };
     }
